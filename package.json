@@ -14,8 +14,22 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
     "tslib": "^2.0.2",
     "typescript": "^4.0.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "extends": [
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {}
+  }
 }
