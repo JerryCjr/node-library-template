@@ -1,10 +1,11 @@
 {
   "name": "node-library-template",
   "version": "0.0.1",
-  "description": "node library template",
-  "main": "dist/lib.js",
-  "types": "dist/lib.d.ts",
-  "author": "jerry",
+  "description": "命令行脚手架",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "author": "Jerry <jerryc_js@163.com>",
   "license": "MIT",
   "engines": {
     "node": ">=8.0.0"
@@ -41,6 +42,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.2",
     "rollup": "^2.30.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.27.3",
     "tslib": "^2.0.2",
     "typescript": "^4.0.3"
   },
