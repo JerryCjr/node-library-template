@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "description": "node library template",
   "main": "dist/lib.js",
+  "types": "dist/lib.d.ts",
   "author": "jerry",
   "license": "MIT",
   "engines": {
     "node": ">=8.0.0"
   },
   "scripts": {
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "build": "rm -rf ./dist && rollup -c"
   },
   "devDependencies": {
