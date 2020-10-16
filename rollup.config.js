@@ -1,5 +1,4 @@
 import typescript2 from 'rollup-plugin-typescript2';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
@@ -20,7 +19,7 @@ export default [
       format: 'cjs',
       banner,
     },
-    plugins: [typescript2(), nodeResolve()],
+    plugins: [typescript2()],
   },
   {
     input,
@@ -28,15 +27,6 @@ export default [
       file: pkg.main.replace(/\.js$/, '.min.js'),
       format: 'cjs',
     },
-    plugins: [typescript2(), nodeResolve(), terser()],
-  },
-  {
-    input,
-    output: {
-      file: pkg.module,
-      format: 'es',
-      banner,
-    },
-    plugins: [typescript2(), nodeResolve()],
+    plugins: [typescript2(), terser()],
   },
 ];
